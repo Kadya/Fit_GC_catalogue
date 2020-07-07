@@ -2,7 +2,6 @@
 from __future__ import print_function
 import matplotlib.pyplot as plt
 import os
-import extraction_tools as tools
 from matplotlib.colors import LogNorm
 import numpy as np
 from copy import deepcopy as copy
