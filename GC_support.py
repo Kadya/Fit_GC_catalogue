@@ -5,7 +5,6 @@ import os
 from matplotlib.colors import LogNorm
 import numpy as np
 from copy import deepcopy as copy
-from filter_routines import process_spec
 from astropy.io import fits
 import warnings
 warnings.filterwarnings("ignore")
