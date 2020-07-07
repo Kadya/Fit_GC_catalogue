@@ -1,6 +1,5 @@
-import matplotlib
 from __future__ import print_function
-
+import matplotlib
 import pPXF_MUSE.ppxf_MUSE as ppxf_MUSE
 import numpy as np
 import os
