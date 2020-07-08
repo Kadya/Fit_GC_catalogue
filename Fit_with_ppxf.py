@@ -47,6 +47,6 @@ if __name__ == "__main__":  # only executed when the program is run by itself an
             kin_only = True
             age_lim = 12
         ppxf_MUSE.ppxf_MUSE_MC(GCi.spec, GCi.wave, galaxy=galaxy, out_dir=out_dir, vel=1200,
-                               filebase=savebase, n=n, kin_only=kin_only, cores=7, lam_range=[4700, 8900],
+                               filebase=savebase, n=n, kin_only=kin_only, cores=10, lam_range=[4700, 8900],
                                save_plot=True, age_lim=age_lim, mask_file='line_mask.dat')
     # ppxf_MUSE.ppxf_MUSE(spec - spec_bg, wave, plot=True, lam_range = [4700, 8900], galaxy = galaxy, quiet = False)
