@@ -44,6 +44,10 @@ def do_gal(galaxy):
         else:
             kin_only = True
             age_lim = 12
+        if galaxy == 'FCCB1241':
+            line_mask = 'line_mask_AO.dat'
+        else:
+            line_mask = 'line_mask.dat'
         ppxf_MUSE.ppxf_MUSE_MC(GCi.spec, GCi.wave, galaxy=galaxy, out_dir=out_dir, vel=1200,
                                filebase=savebase, n=n, kin_only=kin_only, cores=10, lam_range=[4700, 8900],
                                save_plot=True, age_lim=age_lim, mask_file='line_mask.dat')
@@ -52,5 +56,6 @@ def do_gal(galaxy):
 if __name__ == "__main__":  # only executed when the program is run by itself and not imported
 
     galaxies = ['FCC202W', 'FCC202E', 'VCC1226', 'VCC579']
+    galaxies = ['FCC188', 'FCC222', 'FCC215', 'FCC211', 'FCC223', 'FCC227', 'FCCB1241']
     for gal in galaxies:
         do_gal(gal)
