@@ -23,9 +23,7 @@ def isfile(path):
         return 1
 
 
-if __name__ == "__main__":  # only executed when the program is run by itself and not imported
-
-    galaxy = 'VCC731'
+def do_gal(galaxy):
     GC_cat_file = './catalogs/{0}_GC_cat_to_fit.fits'.format(galaxy)
     out_dir = './ppxf_output/{0}'.format(galaxy)
     mkdir(out_dir)
@@ -49,4 +47,10 @@ if __name__ == "__main__":  # only executed when the program is run by itself an
         ppxf_MUSE.ppxf_MUSE_MC(GCi.spec, GCi.wave, galaxy=galaxy, out_dir=out_dir, vel=1200,
                                filebase=savebase, n=n, kin_only=kin_only, cores=10, lam_range=[4700, 8900],
                                save_plot=True, age_lim=age_lim, mask_file='line_mask.dat')
-    # ppxf_MUSE.ppxf_MUSE(spec - spec_bg, wave, plot=True, lam_range = [4700, 8900], galaxy = galaxy, quiet = False)
+
+
+if __name__ == "__main__":  # only executed when the program is run by itself and not imported
+
+    galaxies = ['FCC202W', 'FCC202E', 'VCC1226', 'VCC579']
+    for gal in galaxies:
+        do_gal(gal)
