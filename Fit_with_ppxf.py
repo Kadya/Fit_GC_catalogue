@@ -25,7 +25,7 @@ def isfile(path):
 
 def do_gal(galaxy):
     GC_cat_file = './catalogs/{0}_GC_cat_to_fit.fits'.format(galaxy)
-    out_dir = './ppxf_output/{0}'.format(galaxy)
+    out_dir = './ppxf_output/{0}/'.format(galaxy)
     mkdir(out_dir)
 
     n = 100
