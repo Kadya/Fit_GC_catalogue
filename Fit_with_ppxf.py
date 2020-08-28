@@ -61,7 +61,7 @@ def do_gal(galaxy):
 if __name__ == "__main__":  # only executed when the program is run by itself and not imported
 
     #galaxies = ['FCC202W', 'FCC202E', 'VCC1226', 'VCC579']
-    galaxies = ['FCC990', 'FCC2019']
+    galaxies = ['VCC990', 'VCC2019']
 
     for gal in galaxies:
         do_gal(gal)

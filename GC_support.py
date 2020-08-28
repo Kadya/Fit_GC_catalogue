@@ -267,7 +267,10 @@ def remove_from_cat(remove_file, GCs):
     return new_GCs
 
 
-def get_statistics_from_dist(array):
+def get_statistics_from_dist(array, lims=[1000, 2000], use_lims=False):
+    if use_lims:
+        mask = (array > lims[0]) & (array < lims[1])
+        array = array[mask]
     med = np.percentile(array, 50)
     err_p = np.percentile(array, 100-16.84) - med
     err_m = med - np.percentile(array, 16.84)
