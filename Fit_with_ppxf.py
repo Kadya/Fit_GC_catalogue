@@ -48,14 +48,10 @@ def do_gal(galaxy):
             line_mask = 'line_mask_AO.dat'
         else:
             line_mask = 'line_mask.dat'
-        if GCi.ID == 2:
-            gas_fit = True
-        else:
-            gas_fit = False
 
         ppxf_MUSE.ppxf_MUSE_MC(GCi.spec, GCi.wave, galaxy=galaxy, out_dir=out_dir, vel=1200,
                                filebase=savebase, n=n, kin_only=kin_only, cores=6, lam_range=[4700, 8900],
-                               save_plot=True, age_lim=age_lim, mask_file=line_mask, gas_fit=gas_fit)
+                               save_plot=True, age_lim=age_lim, mask_file=line_mask, gas_fit=False)
 
 
 if __name__ == "__main__":  # only executed when the program is run by itself and not imported
